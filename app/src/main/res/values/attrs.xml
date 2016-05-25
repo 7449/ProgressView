@@ -1,0 +1,17 @@
+<resources>
+
+
+    <declare-styleable name="CirclesProgressBar">
+
+        <attr name="circlesWidth" format="dimension" />
+        <attr name="circlesColor" format="color" />
+        <attr name="textCrude" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="currentProgressColor" format="color" />
+        <attr name="currentProgress" format="integer" />
+        <attr name="isPercent" format="boolean" />
+        <attr name="style" format="integer" />
+        <attr name="currentScheduleWidth" format="dimension" />
+    </declare-styleable>
+</resources>

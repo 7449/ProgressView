@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         assert button != null;
         assert progressBarView != null;
-
-
         progressBarView.setPercent(false);
+        progressBarView.setStyle(0);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,13 +37,11 @@ public class MainActivity extends AppCompatActivity {
         progressHandler.setProgress(new ProgressHandler.Progress() {
             @Override
             public void setSchedule(int schedule) {
-                progressBarView.setBackgroundResource(R.drawable.down);
                 progressBarView.setCurrentProgress(schedule);
             }
 
             @Override
             public void onSuccess() {
-                progressBarView.setBackgroundResource(R.drawable.ok);
             }
         });
 

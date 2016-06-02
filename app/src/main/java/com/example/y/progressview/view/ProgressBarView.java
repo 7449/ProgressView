@@ -163,9 +163,6 @@ public class ProgressBarView extends View {
     }
 
     public void setStyle(int style) {
-        if (style != FILL || style != STROKE) {
-            style = STROKE;
-        }
         this.style = style;
     }
 

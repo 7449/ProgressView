@@ -47,6 +47,7 @@ public class ProgressBarView extends View {
     private float currentScheduleWidth;
     //是否显示百分比
     private boolean isPercent;
+    private RectF rectF;
 
 
     public ProgressBarView(Context context) {
@@ -66,6 +67,7 @@ public class ProgressBarView extends View {
     private void init(Context context, AttributeSet attrs) {
 
         mPaint = new Paint();
+        rectF = new RectF();
         mPaint.setAntiAlias(true);
         TypedArray mTypedArray = context.obtainStyledAttributes(attrs, R.styleable.CirclesProgressBar);
 
@@ -83,6 +85,7 @@ public class ProgressBarView extends View {
         currentScheduleWidth = mTypedArray.getDimension(R.styleable.CirclesProgressBar_currentScheduleWidth, ProgressDefaults.CURRENT_SCHEDULE_WIDTH);
 
         mTypedArray.recycle();
+
     }
 
 
@@ -114,8 +117,7 @@ public class ProgressBarView extends View {
         //进度的圆环
         mPaint.setColor(currentProgressColor);
         mPaint.setStrokeWidth(currentScheduleWidth);
-        RectF rectF = new RectF(anInt - circlesRadius, anInt - circlesRadius, anInt + circlesRadius, anInt + circlesRadius);
-
+        rectF.set(anInt - circlesRadius, anInt - circlesRadius, anInt + circlesRadius, anInt + circlesRadius);
         //选择风格
         switch (style) {
 

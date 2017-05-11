@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         assert button != null;
         assert progressBarView != null;
         progressBarView.setPercent(false);
-        progressBarView.setStyle(0);
+        progressBarView.setStyle(1);
 
 
         button.setOnClickListener(new View.OnClickListener() {
